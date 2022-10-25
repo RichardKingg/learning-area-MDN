@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Object basics: Task 2</title>
     <style>
       p {
@@ -17,26 +17,31 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
     let bandInfo;
 
     // Add your code here
-
+    let bandDetails = {
+      name: "Steely Dan",
+      nationality: "American",
+      genre: "Jazz Rock",
+      members: 2,
+      formed: 1971,
+      split: 1981,
+      albums: {
+        name: ["Can't Buy a Thrill", "Countdown to Ecstasy"],
+        released: [1972, 1973],
+      },
+    };
+    bandInfo = `${bandDetails.name} is an ${bandDetails.nationality} ${bandDetails.genre} band, which played from ${bandDetails.formed} to ${bandDetails.split}, their two first albums where ${bandDetails.albums.name} released in ${bandDetails.albums.released}`;
 
     // Don't edit the code below here!
 
-    const section = document.querySelector('section');
-    let para1 = document.createElement('p');
+    const section = document.querySelector("section");
+    let para1 = document.createElement("p");
     para1.textContent = bandInfo;
     section.appendChild(para1);
   </script>
-
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Object basics: Task 4</title>
     <style>
       p {
@@ -17,23 +17,20 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-    const cat = {
-      name : 'Bertie',
-      breed : 'Cymric',
-      color : 'white',
-      greeting: function() {
-        console.log('Meow!');
-      }
+    function Greeting(name) {
+      this.name = name;
+      this.introduction = function () {
+        console.log(`Hello, said ${this.name}`);
+      };
     }
-  </script>
 
+    const cat1 = new Greeting("Titan");
+    cat1.introduction();
+
+    const cat2 = new Greeting("Snowy");
+    cat2.introduction();
+  </script>
 </html>
